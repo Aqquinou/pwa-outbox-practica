@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header h1 {
+  font-size: 22px;
+}
+
+.badge {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.badge.online {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.offline {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+main {
+  width: 90%;
+  max-width: 850px;
+  margin: 35px auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.header-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.header-lista button {
+  background: #475569;
+}
+
+.header-lista button:hover {
+  background: #334155;
+}
+
+#lista-outbox {
+  list-style: none;
+}
+
+#lista-outbox li {
+  padding: 15px;
+  margin-top: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.estado {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 15px;
+}
+
+.estado.pendiente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.estado.sincronizado {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.fecha {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.vacio {
+  color: #64748b;
+  padding: 15px 0;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 19px;
+  }
+
+  main {
+    width: 94%;
+    margin: 20px auto;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "PWA Registro de Incidencias",
+  "short_name": "Incidencias",
+  "description": "Aplicación de registro de incidencias con funcionamiento offline",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#1e3a8a"
+}

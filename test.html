@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prueba IndexedDB</title>
+  </head>
+  <body>
+    <h1>Prueba de IndexedDB</h1>
+
+    <button id="btn-guardar">Guardar registro</button>
+    <button id="btn-consultar">Consultar registros</button>
+
+    <script src="./db-helper.js"></script>
+    <script>
+      document.getElementById("btn-guardar").addEventListener("click", () => {
+        guardarRegistro({
+          titulo: "Prueba de IndexedDB",
+          descripcion: "Mi primera incidencia offline",
+          estado: "pendiente",
+          fechaCreacion: Date.now(),
+        })
+          .then((id) => {
+            console.log("Registro guardado. ID:", id);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      });
+
+      document.getElementById("btn-consultar").addEventListener("click", () => {
+        obtenerTodosLosRegistros()
+          .then((registros) => {
+            console.table(registros);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      });
+    </script>
+  </body>
+</html>
